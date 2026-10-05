@@ -35,6 +35,7 @@ const csvWriter = createObjectCsvWriter({
 const client = new Client({
     authStrategy: new LocalAuth(), // Salva o login para não precisar ler o QR Code sempre
     puppeteer: {
+        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined, // Necessário para nuvem/Docker
         args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-extensions']
     }
 });
