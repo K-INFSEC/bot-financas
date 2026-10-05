@@ -3,7 +3,7 @@ const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const fs = require('fs');
 const qr = require('qrcode');
-const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+const { createObjectCsvWriter } = require('csv-writer');
 const express = require('express');
 
 // --- Configuração do Servidor Web (Para manter o robô acordado na nuvem) ---
